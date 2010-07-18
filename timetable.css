@@ -1,0 +1,45 @@
+table {
+  border-collapse:collapse;
+}
+tr, td, th {
+  padding: 0 5pt;
+  margin: 0;
+  border: 1px solid #888;
+  text-align: left;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ddf;
+}
+td.skipped,
+td.none,
+td.change {
+  text-align: center;
+}
+td.skipped,
+td.none {
+  background-color: #bba;
+}
+tbody tr:nth-child(odd) td.skipped, 
+tbody tr:nth-child(odd) td.none {
+  background-color: #bbc;
+}
+td.change {
+  background-color: #ff8;
+}
+dl.key {
+  margin-bottom: 1em;
+}
+dl.key dt {
+  float:left;
+  font-weight:bold;
+  margin: 0;
+  padding: 0;
+  width: 1em;
+}
+dl.key dd {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  border-top: 1px solid #888;
+}
