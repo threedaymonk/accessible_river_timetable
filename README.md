@@ -6,15 +6,17 @@ A parser/generator to turn the rather inaccessible PDF-formatted Thames Clippers
 Usage
 -----
 
-Extract the text from the [commuter service PDF](http://www.thamesclippers.com/routes-times-prices-booking/timetables-prices.html)
+Extract the text from the [commuter service PDF](http://www.thamesclippers.com/routes-times-prices-booking/timetables-prices.html):
 
     pdftotext -layout timetable.pdf
 
-Convert to HTML
+Convert to HTML:
 
     ruby convert.rb < timetable.txt > index.html
 
 Tweak `timetable.txt` to fix any columns that are out of alignment and repeat until happy.
+
+It should [look like this](http://po-ru.com/thames/).
 
 Prerequisites
 -------------

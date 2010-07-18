@@ -2,10 +2,10 @@
 %html
   %head
     %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
-    %title Accessible Thames Clipper Timetable
+    %title Accessible Thames Clippers Timetable
     %link{:rel => "stylesheet", :href => "timetable.css", :type => "text/css"}
   %body
-    %h1 Accessible Thames Clipper Timetable 
+    %h1 Accessible Thames Clippers Timetable
     - timetables.each do |title, table|
       %section
         %h2= title
@@ -28,8 +28,9 @@
         This was generated from the [PDF timetable valid from 27 March 2010] [pdf]
         by [Paul Battley] [pb] using [some automated code] [code] and a
         bit of manual tweaking.  It is not in any way associated with or
-        authorised by Thames Clippers. It may contain errors.
+        authorised by [Thames Clippers] [tc]. It may contain errors.
         
           [pdf]: http://www.thamesclippers.com/images/pdf/commuter-timetable-mar2010.pdf
           [pb]: http://po-ru.com/
           [code]: http://github.com/threedaymonk/accessible_river_timetable
+          [tc]: http://www.thamesclippers.com/
