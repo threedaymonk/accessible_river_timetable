@@ -25,7 +25,7 @@ timetables = sections.map{ |section, table|
       rows.each do |row|
         x.tr do
           x.th row[0]
-          row[2..-1].each_with_index do |cell, i|
+          row[1..-1].each_with_index do |cell, i|
             format =
               case cell
               when "C"
