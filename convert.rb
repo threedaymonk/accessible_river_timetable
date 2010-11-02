@@ -7,7 +7,7 @@ sections = []
 $stdin.each_line do |line|
   line.chomp!
   case line
-  when /^(EAST|WEST)BOUND/
+  when /^(EAST|WEST)BOUND/i
     sections << [line.split(/\s{4,}/).first, []]
   when /^\s/
     # skip
@@ -24,8 +24,8 @@ timetables = sections.map{ |section, table|
     x.tbody do
       rows.each do |row|
         x.tr do
-          x.th row[0, 2].compact.join(" ") # The O2 sits far enough out to get its own column
-          row[3..-1].each_with_index do |cell, i|
+          x.th row[0]
+          row[2..-1].each_with_index do |cell, i|
             format =
               case cell
               when "C"
@@ -35,15 +35,7 @@ timetables = sections.map{ |section, table|
               when ""
                 ["", {:class => "none"}]
               when /\d{4}/
-                star = (i == (row.length - 4)) ? "*" : ""
-                case row[2]
-                when /Arrive/
-                  [cell + "a" + star, {:class => "arrive"}]
-                when /Depart/
-                  [cell + "d" + star, {:class => "depart"}]
-                else
-                  [cell + star]
-                end
+                [cell]
               else
                 [""]
               end
